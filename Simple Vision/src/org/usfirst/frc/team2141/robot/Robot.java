@@ -19,7 +19,7 @@ public class Robot extends SampleRobot {
         //the camera name (ex "cam0") can be found through the roborio web interface
         server.startAutomaticCapture("cam0");
     }
-
+//test
     /**
      * start up automatic capture you should see the video stream from the
      * webcam in your FRC PC Dashboard.
