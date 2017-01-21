@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team2141.robot.subsystems.Chassis;
+import org.usfirst.frc.team2141.robot.subsystems.Intake;
 import org.usfirst.frc.team2141.utils.ADIS16448_IMU;
 
 /**
@@ -24,6 +25,7 @@ public class Robot extends IterativeRobot {
 	public static Chassis chassis;
 	public static OI oi;
 	public static ADIS16448_IMU imu;
+	public static Intake intake;
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -38,6 +40,7 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		PDP = new PowerDistributionPanel();
 		imu = new ADIS16448_IMU();
+		intake = new Intake();
 		// chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);

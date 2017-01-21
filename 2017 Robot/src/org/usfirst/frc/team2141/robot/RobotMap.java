@@ -17,30 +17,37 @@ public class RobotMap {
 	// public static int rangefinderPort = 1;
 	// public static int rangefinderModule = 1;
 	
+	
+	//Motor Channel Numbers
 	public static final int RIGHT_MOTOR_A = 1;
 	public static final int RIGHT_MOTOR_B = 2;
 	public static final int RIGHT_MOTOR_C = 3;
 	public static final int LEFT_MOTOR_A = 4;
 	public static final int LEFT_MOTOR_B = 5;
 	public static final int LEFT_MOTOR_C = 6;
+	public static final int INTAKE_MOTOR = 8;
+	public static final int WINCH_MOTOR = 7;
 
+	//Solenoid Channel Numbers
 	public static final int LEFT_SHIFTER_CHANNEL_A = 0;
 	public static final int LEFT_SHIFTER_CHANNEL_B = 1;
 	public static final int RIGHT_SHIFTER_CHANNEL_A = 2;
 	public static final int RIGHT_SHIFTER_CHANNEL_B = 3;
+	public static final int WINCH_STOPPER_CHANNEL_A = 0;
+	public static final int WINCH_STOPPER_CHANNEL_B = 0;
 	
+	//Sensor Channel Numbers
 	public static final int LEFT_ENCODER_CHANNEL_A = 0;
 	public static final int LEFT_ENCODER_CHANNEL_B = 1;
 	public static final int RIGHT_ENCODER_CHANNEL_A = 2;
 	public static final int RIGHT_ENCODER_CHANNEL_B = 3;
-	
-	public static final int WINCH_MOTOR = 7;
-	public static final int WINCH_STOPPER_CHANNEL_A = 0;
-	public static final int WINCH_STOPPER_CHANNEL_B = 0;
 	public static final int WINCH_PDP_CHANNEL = 0;
-	
-	
-	public static final double SPEED_THRESHOLD = 100;
 
+	//Button Numbers
+	public static final int INTAKE_BUTTON = 1;
+	
+	//Threshold Values
+	public static final double SPEED_THRESHOLD = 100;
+		
 
 }

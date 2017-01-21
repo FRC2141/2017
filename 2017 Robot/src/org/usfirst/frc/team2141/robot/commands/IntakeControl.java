@@ -1,4 +1,4 @@
-	package org.usfirst.frc.team2141.robot.commands;
+package org.usfirst.frc.team2141.robot.commands;
 
 import org.usfirst.frc.team2141.robot.Robot;
 import org.usfirst.frc.team2141.robot.RobotMap;
@@ -8,33 +8,25 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class DriveWithJoystick extends Command {
+public class IntakeControl extends Command {
 
-	public DriveWithJoystick() {
+    public IntakeControl() {
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
-		requires(Robot.chassis);
+		requires(Robot.intake);
 	}
 
 	// Called just before this Command runs the first time
 	protected void initialize() {
-		Robot.chassis.setBothToLow();
+		Robot.intake.setIntakeMotor(0);
 	}
 
 	// Called repeatedly when this Command is scheduled to run
 	protected void execute() {
-
-		Robot.chassis.arcadeDrive(Robot.oi.getDriveStick().getX(), Robot.oi.getDriveStick().getY());
-		if (Robot.chassis.getLeftRate() > RobotMap.SPEED_THRESHOLD) {
-			Robot.chassis.setLeftToHigh();
+		if (Robot.oi.getButton(RobotMap.INTAKE_BUTTON)) {
+			Robot.intake.setIntakeMotor(0.5);
 		} else {
-			Robot.chassis.setLeftToLow();
-		}
-		
-		if (Robot.chassis.getRightRate() > RobotMap.SPEED_THRESHOLD) {
-			Robot.chassis.setRightToHigh();
-		} else {
-			Robot.chassis.setRightToLow();
+			Robot.intake.setIntakeMotor(0);
 		}
 	}
 

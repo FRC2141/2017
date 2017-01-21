@@ -1,8 +1,7 @@
 package org.usfirst.frc.team2141.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.Button;
-
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -36,13 +35,23 @@ public class OI {
 	// Start the command when the button is released and let it run the command
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
-	public static Joystick driveStick;
-	public OI (){
+	public Joystick driveStick;
+	public JoystickButton[] buttons;
+
+	public OI() {
 		driveStick = new Joystick(0);
-}
-	public static Joystick getDriveStick() {
-		return driveStick;
-		
+		buttons = new JoystickButton[11];
+		for(int i = 0; i < 11; i++){
+			buttons[i] = new JoystickButton(driveStick, i + 1);
+		}
 	}
+
+	public Joystick getDriveStick() {
+		return driveStick;
+	}
+	
+	public boolean getButton(int number){
+		return this.buttons[number - 1].get();
+	}
+	
 }
- 
