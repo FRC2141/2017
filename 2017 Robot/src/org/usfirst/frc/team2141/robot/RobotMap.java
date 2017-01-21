@@ -34,6 +34,11 @@ public class RobotMap {
 	public static final int RIGHT_ENCODER_CHANNEL_A = 2;
 	public static final int RIGHT_ENCODER_CHANNEL_B = 3;
 	
+	public static final int WINCH_MOTOR = 7;
+	public static final int WINCH_STOPPER_CHANNEL_A = 0;
+	public static final int WINCH_STOPPER_CHANNEL_B = 0;
+	public static final int WINCH_PDP_CHANNEL = 0;
+	
 	
 	public static final double SPEED_THRESHOLD = 100;
 

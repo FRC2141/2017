@@ -2,6 +2,7 @@
 package org.usfirst.frc.team2141.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -19,6 +20,7 @@ import org.usfirst.frc.team2141.utils.ADIS16448_IMU;
  * directory.
  */
 public class Robot extends IterativeRobot {
+	public static PowerDistributionPanel PDP;
 	public static Chassis chassis;
 	public static OI oi;
 	public static ADIS16448_IMU imu;
@@ -34,6 +36,7 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		chassis = new Chassis();
 		oi = new OI();
+		PDP = new PowerDistributionPanel();
 		imu = new ADIS16448_IMU();
 		// chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
